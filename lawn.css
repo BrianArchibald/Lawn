@@ -38,6 +38,7 @@ a {
 	margin: 0;
 	z-index: 100;
 	width: 100%;
+	position: fixed;
 	transition: all 1s;
 }
 
@@ -53,6 +54,14 @@ a {
 
 .nav-list-top a {
 	color: white;
+}
+
+.navtop-hide {
+	visibility: hidden;
+
+/* display: none;
+*/
+	transition: all 1s;
 }
 
 
@@ -90,6 +99,10 @@ a {
 
 .nav-list-bottom a {
 	color: white;
+}
+
+.bottom-nav-fixed {
+	
 }
 
 
