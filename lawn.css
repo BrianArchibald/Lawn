@@ -27,6 +27,17 @@ a {
 	align-items: center;
 }
 
+.header-main-text {
+	font-size: 30px;
+	text-align: center;
+	padding-bottom: 2em;
+}
+
+.header-additional-text {
+	font-size: 20px;
+	text-align: center;
+}
+
 /* Top Nav Bar  */
 
 .navbar-top {
@@ -100,7 +111,7 @@ a {
 	*/
 
 	margin: 0;
-  	padding: 1em 3em;
+  	padding: 1em 1em;
   	list-style: none;
   	display:flex;
 
@@ -145,10 +156,15 @@ a {
 .section-container 	{
 	margin: 10em 4em;
 	display: grid;
-	grid-gap: 10px;
+	grid-gap: 4em;
 	grid-template-columns: 1fr 1fr;
 	transform: scale(0.98);
 	transition: transform 0.5s;
+
+}
+
+.section-text {
+	display: grid;
 
 }
 
@@ -157,18 +173,49 @@ a {
 }
 
 .section-container img {
+	height: 70vh;
+	display: grid;
+	align-self: center;
+	/*
+
 	max-height: 400px;
 	max-width: 400px;
-	/*
+
+
 	height: 70vh;
 	background-size: cover;
-	background-position: center;
-	*/
+	background-position: center; */
 }
+
+
 
 .section-header {
 	font-size: 70px;
 	color: #653000;
+	font-weight: 400;
+	margin-top: 20px;
+}
+
+.section-main-text {
+	font-size: 16px;
+	color: #653000;
+	line-height: 30px;
+}
+
+/* Landscaping Section  */
+
+.landscaping {
+	background-color: #efefef;
+}
+
+
+
+
+/* Snow Removal */
+
+
+.snowremoval {
+	background-color: #efefef;
 }
 
 
@@ -185,6 +232,7 @@ button {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    margin-bottom: 30px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 

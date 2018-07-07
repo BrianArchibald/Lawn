@@ -31,9 +31,6 @@ function debounce(func, wait = 20, immediate = true) {
 
 function fixedBottomNav() {
 
-  console.log(topOfBottomNav);
-  console.log(window.scrollY);
-
 	if (window.scrollY >= topOfBottomNav) {
     document.body.style.paddingTop = bottomNavbar.offsetHeight + 'px';
 		document.body.classList.add('bottom-nav-fixed');
