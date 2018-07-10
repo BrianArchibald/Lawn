@@ -44,7 +44,7 @@ a {
 
 	display: grid;
 	grid-template-columns: 2fr 1fr;
-	top: -170px;
+	top: -15vh;
 	padding: 0 3em;
 	margin: 0;
 	z-index: 100;
@@ -244,6 +244,56 @@ button:hover {
 	background-color: #59d15d;
 }
 
-/*   */
+/*  Image Gallery   */
 
+.gallery-row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5vh;
+  overflow: hidden;
+}
+
+/* Create four equal columns that sits next to each other */
+.gallery-column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 5vh;
+  overflow: hidden;
+}
+
+.gallery-column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+.gallery-photo {
+	/*
+	opacity: 0.8;
+	transform: scale(1.15);
+	transition: transform 0.5s, opacity 0.5s;
+	*/
+}
+
+.gallery-photo:hover {
+	/*
+	opacity: 1;
+	transform: scale(1.03);
+	*/
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .gallery-column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .gallery-column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
 
