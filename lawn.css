@@ -6,6 +6,10 @@
 body {
 	margin: 0;
 }
+html,body{
+	min-height:100%;
+	min-width: 100%;
+}
 
 a {
 	text-decoration: none;
@@ -86,8 +90,19 @@ a {
 	transition: all 1s;
 }
 
+.nav-sticky-v2 {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	background-color: #629238;
+	position: fixed;
+	top: 0;	
+	margin: 0;
+	z-index: 100;
+	width: 100%;
+}
 
 /*  Bottom Nav Bar  */
+
 
 .navbar-bottom {
 	/*display: grid;
@@ -145,11 +160,12 @@ a {
 	color: white;
 }
 .bottom-nav-fixed {
-	width: 100%;
+	
 }
 
 .bottom-nav-fixed .navbar-bottom {
 	position: fixed;
+	width: 100%;
 	box-shadow: 0 3px rgba(0,0,0,0.1);
 }
 
@@ -182,6 +198,10 @@ a {
 }
 
 /* Section Container  */
+
+.lawncare {
+	width: 100%;
+}
 
 .section-container 	{
 	margin: 10em 4em;
@@ -226,7 +246,6 @@ a {
 	font-size: 70px;
 	color: #653000;
 	font-weight: 400;
-	margin-top: 20px;
 }
 
 .section-main-text {
@@ -237,7 +256,7 @@ a {
 
 /* Landscaping Section  */
 
-.landscaping {
+#landscaping-section {
 	background-color: #efefef;
 }
 
@@ -276,6 +295,7 @@ button:hover {
 /* Footer  */
 .footer {
 	background-color: #629238;
+
 }
 .footer-address li {
 	list-style: none;
@@ -290,7 +310,7 @@ button:hover {
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-gap: 20px;
 	justify-items: center;
-	padding: 5vh;
+	padding: 3vh 5vh 0 5vh;
 	color: white;
 }
 .copyright {
@@ -344,13 +364,13 @@ button:hover {
 
 /* Media Responsive Layout */
 
-@media (max-width: 1339px) {  /*iPad in landscape mode has 1024px */
+@media screen and (max-width: 1339px) {  /*iPad in landscape mode has 1024px */
 	.section-container {
 
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		margin: 0 4em;
+		margin: 10vh 4vh 0 4vh;
 
 		/*display: grid;
 		grid-template-rows: 1fr 1fr;
@@ -373,25 +393,19 @@ button:hover {
 		padding-bottom: 5vh;
 	}
 	.section-text {
-		display: grid;
-		grid-template-rows: 1fr 1fr 1fr;
+		
 	}
 	button {
 		justify-self: center;
 	}
 
 
-@media (max-width: 1078px) {  /*iPad in landscape mode has 1024px */
+@media screen and (max-width: 1078px) {  /*iPad in landscape mode has 1024px */
 	
 	.navbar-bottom {
 		
 	}
-	.mobile-nav-container {
-		display: inline-block;
-	}
-	.nav-list-bottom {
-		display: none;
-	}
+	
 	.section-img {
 		justify-self: center;
 	}
@@ -401,20 +415,27 @@ button:hover {
 
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 891px) {
   .gallery-column {
     flex: 50%;  
     max-width: 50%;
   }
-  .section-container {
-  	grid-template-rows: 1fr 1fr;
-  }
+
   .section-container img {
-  	height: 45vh;
+  	width: 50vh;
+    height: auto;
   }
   .section-header {
-  	font-size: 50px
+  	font-size: 50px;
+  	margin-top: 4vh;
+  	margin-bottom: 0;
   }
+  .navList {
+  	display: none;
+  }
+  .mobile-nav-container {
+	display: inline-block;
+	}
 }
 
 
@@ -423,5 +444,27 @@ button:hover {
     flex: 100%;
     max-width: 100%;
   }
+
+  .section-img {
+    padding-top: 0;
+   }
+   #lawncare-section{
+   	padding-top: 8vh;
+   }
+
 }
 
+@media screen and (max-width: 441px) {
+
+  .section-container img {
+  	width: 40vh;
+    height: auto;
+  }
+  .header-main-text {
+  	font-size: 3em;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+  }
