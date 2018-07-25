@@ -41,6 +41,7 @@ a {
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	word-spacing: 4px;
+	font-family: 'Lora', serif;
 	
 }
 
@@ -48,6 +49,10 @@ a {
 	font-size: 25px;
 	font-weight: 200;
 	text-align: center;
+     margin-bottom: 20vh;
+
+
+
 }
 
 /* Top Nav Bar  */
@@ -75,7 +80,7 @@ a {
 
 }
 .nav-list-top li {
-	margin: 0 5vh;
+	margin: 0 4vh;
 }
 
 .nav-list-top a {
@@ -99,6 +104,41 @@ a {
 	margin: 0;
 	z-index: 100;
 	width: 100%;
+}
+
+
+/* Mobile Nav Pop Up  */
+
+.mobile-nav {
+	display: none;
+	position: fixed;
+	width: 100%;
+	top: 0px;
+	z-index: 100;
+}
+.mobile-list {
+	background: #629238;
+	padding-top: 0px;
+	z-index: 100;
+    margin: 0px;
+    list-style-type: none;
+    font-family: Open Sans, sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-align: center;
+    opacity: .85;
+}
+.nav-list-mobile {
+	text-decoration: none;
+	color: white;
+	padding: 8px 0px;
+    font-size: 16px;
+    border-bottom: solid 1px rgb(255, 255, 255, 0.85);
+    margin-left: -6vh;
+}
+#about-mobile {
+	border-bottom: none;
 }
 
 /*  Bottom Nav Bar  */
@@ -258,6 +298,7 @@ a {
 
 #landscaping-section {
 	background-color: #efefef;
+	margin-top: -9vh;
 }
 
 
@@ -268,6 +309,7 @@ a {
 
 .snowremoval {
 	background-color: #efefef;
+	margin-top: -9vh;
 }
 
 
@@ -322,15 +364,32 @@ button:hover {
 
 /*  Image Gallery   */
 
+.gallery-header {
+	color: #653000;
+	text-align: center;
+	font-size: 50px;
+	font-family: Open Sans;
+}
+.gallery-container {
+	
+	margin: 10vh 5vh;
+}
+
+.gallery-buttons {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
 .gallery-row {
   display: flex;
   flex-wrap: wrap;
- 
+  justify-content: center;
   overflow: hidden;
 }
 
 /* Create four equal columns that sits next to each other */
 .gallery-column {
+
   flex: 25%;
   max-width: 25%;
   
@@ -357,7 +416,64 @@ button:hover {
 	*/
 }
 
+/* Contact Form  */
 
+.form-body {
+	background-image: ;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	margin: 0;
+}
+.form-container {
+	display: grid;
+	grid-template-rows: 1fr;
+	justify-content: center;
+	margin: 10vh;	
+}
+.form-text {
+	color: white;
+}
+.pure-group {
+	border: none;
+	display: grid;
+	grid-template-rows: 1fr;
+	color: white;
+
+}
+.form-title {
+	font-size: 28px;
+	color: white;
+	text-align: center;
+}
+label {
+	margin-bottom: 2vh;
+}
+aside {
+	padding-left: 12px;
+}
+#message {
+	max-width: 75vh;
+}
+button {
+	margin-top: 6vh;
+	margin-left: 35%;
+	width: 130px;
+	height: 55px;
+	background-color: #7c001b;
+    border: none;
+    color: white;
+    padding: 15px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 30px;
+   }
+button:hover {
+	box-shadow: 0 12px 16px 0 rgba(184, 185, 186,0.24), 0 17px 50px 0 rgba(184, 185, 186,0.19);
+	background-color: #ff0037;
+}
 
 
 
@@ -377,6 +493,7 @@ button:hover {
 		grid-template-columns: 0;
 		*/
 	}
+
 
 	.section-container img {
 		padding: 0;
@@ -402,12 +519,14 @@ button:hover {
 
 @media screen and (max-width: 1078px) {  /*iPad in landscape mode has 1024px */
 	
-	.navbar-bottom {
-		
-	}
-	
 	.section-img {
 		justify-self: center;
+	}
+	.navList {
+  	display: none;
+  }
+  .mobile-nav-container {
+	display: inline-block;
 	}
 
 }
@@ -430,12 +549,7 @@ button:hover {
   	margin-top: 4vh;
   	margin-bottom: 0;
   }
-  .navList {
-  	display: none;
-  }
-  .mobile-nav-container {
-	display: inline-block;
-	}
+  
 }
 
 
@@ -451,13 +565,24 @@ button:hover {
    #lawncare-section{
    	padding-top: 8vh;
    }
+   .section-container img {
+    width: 38vh;
+    height: auto;
+	}
 
+}
+
+@media screen and (max-width: 500px) {
+	.section-container img {
+    width: 30vh;
+    height: auto;
+	}
 }
 
 @media screen and (max-width: 441px) {
 
   .section-container img {
-  	width: 40vh;
+  	width: 22vh;
     height: auto;
   }
   .header-main-text {
