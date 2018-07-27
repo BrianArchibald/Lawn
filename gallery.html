@@ -7,17 +7,118 @@
 	<link rel="stylesheet" type="text/css" href="lawn.css">
 </head>
 <body style="background-color: #efefef">
-	<h1 class="gallery-header">Some of Our Work</h1>
-	<div class="gallery-buttons">
-		<div class="button-container">
-			<button class="contact">Contact Us</button>
-		</div>
-		<div class="button-container">
-			<button class="contact">Home</button>
-		</div>
-	</div>
+	<nav class="navbar nav-sticky-v2 ">
+        <div class="navLogo">
+          <a>
+            <h1 id="nav-logo" class="logo">CR LOGO</h1>
+          </a>
+        </div>
+        <div class="navList">
+          <ul class="nav-list-top">
+            <li>
+              <a class="nav-active" href="#header">
+                <div class="nav-list-items">HOME</div>
+              </a>
+            </li>
+            <li>
+              <a class="nav-active" href="#about-section">
+                <div class="nav-list-items">ABOUT</div>
+              </a>
+            </li>
+            <li>
+              <a class="nav-active" href="#lawncare">
+                <div class="nav-list-items">SERVICES</div>
+              </a>
+            </li>
+            <li>
+              <a class="nav-active" href="gallery.html">
+                <div class="nav-list-items">PHOTOS</div>
+              </a>
+            </li>
+            <li>
+              <a class="nav-active" href="contact-form.html">
+                <div class="nav-list-items">CONTACT</div>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mobile-nav-container">
+          <ul class="mobile-nav-list-bottom">
+            <li class="navLogoBottom">
+              <a class="nav-active " href="#lawncare">
+                <div class="nav-list-items">CR LOGO</div>
+              </a>
+            </li>
+          <!--
+            <li>
+              <a class="nav-active" href="#contact-section">
+                <div class="nav-list-items">515.515.2234</div>
+              </a>
+            </li>
+          -->
+            <a class="mobile-nav-icon">
+              <i class="fa fa-bars" id="menu-icon" aria-hidden="true"></i> 
+            </a>
+        </div>
+          
+      </nav>    <!--     End of Nav Bar Top   -->
+
+      <nav class="mobile-nav" id="mobile-nav">
+          <div class="mobile-menu" id="close-menu">
+            <ul class="mobile-list" id="mobile-list">
+              <li>
+                <a class="nav-active">
+                  <div class="nav-list-mobile" class="close-menu">Close Menu</div>
+                </a>
+              </li>
+              <li>
+                <a class="nav-active" href="contact-form.html">
+                  <div class="nav-list-mobile" id="mobile-contact" class="close-menu">Contact</div>
+                </a>
+              </li>
+              <li>
+                <a class="nav-active" href="#lawncare-section">
+                  <div class="nav-list-mobile" class="close-menu">Lawn Care</div>
+                </a>
+              </li>
+              <li>
+                <a class="nav-active" href="landscaping-section">
+                  <div class="nav-list-mobile" class="close-menu">Landscaping</div>
+                </a>
+              </li>
+              <li>
+                <a class="nav-active" href="#cleanup-section">
+                  <div class="nav-list-mobile" class="close-menu">Spring/Fall Cleanup</div>
+                </a>
+              </li>
+              <li>
+                <a class="nav-active" href="#snow-section">
+                  <div class="nav-list-mobile" class="close-menu">Snow Removal</div>
+                </a>
+              </li>
+              <li>
+                <a class="nav-active" href="gallery.html">
+                  <div class="nav-list-mobile" class="close-menu">Photos</div>
+                </a>
+              </li>
+              <li>
+                <a class="nav-active" href="#about-section">
+                  <div class="nav-list-mobile" id="about-mobile" class="close-menu">About</div>
+                </a>
+              </li>
+              
+              
+            </ul>
+          </div>
+        </nav>
+
+
+	
+	
 
 	<div class="gallery-container">
+		<h1 class="gallery-header">Some of Our Work</h1>
 		<div class="gallery-row">
 			<div class="gallery-column">
 				<img class="gallery-photo" src="mower.jpg" style="width:100%">
@@ -57,5 +158,22 @@
 			</div>
 		</div>  <!-- End of Gallery Row -->
 	</div>
+
+	<div class="footer">
+        <div class="footer-contact-logo">
+          <div class="logo">CR Logo
+          </div>
+          <div class="footer-address">
+            <li>PO BOX 231<br> West Des Moines<br> Iowa 50265</li>
+          </div>
+          <div class="footer-other-contact">
+            <li class="footer-phone">515-221-1321</li>
+            <li class="footer-email">myemail@email.com</li>
+          </div>
+          </div>
+          <a class="footer-copyright" href="http://www.brianarchibald.me">
+            <div class="copyright">Designed by &copy; BrianArchibald.me</div>
+          </a>
+      
 </body>
 </html>

@@ -104,6 +104,7 @@ a {
 	margin: 0;
 	z-index: 100;
 	width: 100%;
+	box-shadow: 0px 3px 6px 0px rgba(50, 50, 50, 0.39);
 }
 
 
@@ -334,6 +335,7 @@ button:hover {
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 	background-color: #59d15d;
 }
+
 /* Footer  */
 .footer {
 	background-color: #629238;
@@ -427,7 +429,7 @@ button:hover {
 }
 .form-container {
 	display: grid;
-	grid-template-rows: 1fr;
+	grid-template-columns: 0.8fr 1fr;
 	justify-content: center;
 	margin: 10vh;	
 }
