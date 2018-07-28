@@ -431,10 +431,12 @@ button:hover {
 	display: grid;
 	grid-template-columns: 0.8fr 1fr;
 	justify-content: center;
-	margin: 10vh;	
+	margin: 20vh 7vh;	
+	grid-gap: 10px;
 }
 .form-text {
 	color: #653000;
+	margin-left: 2vh;
 }
 .pure-group {
 	border: none;
@@ -447,6 +449,7 @@ button:hover {
 	font-size: 28px;
 	color: #653000;
 	text-align: center;
+	margin-right: 4vh;
 }
 label {
 	margin-bottom: 2vh;
@@ -461,6 +464,23 @@ aside {
 .pure-button {
 	margin-left: 2vh;
 	margin-top: 2vh;
+}
+
+.contact-address {
+	list-style-type: none;
+	color: #653000;
+	line-height: 1.5em;
+	margin-bottom: 10vh;
+}
+
+.other-contact {
+	list-style-type: none;
+ 	color: #653000;
+ 	line-height: 1.8em;
+}
+.contact-phone {
+	font-size: 1.25em;
+
 }
 
 /*
@@ -558,6 +578,14 @@ button:hover {
   	font-size: 50px;
   	margin-top: 4vh;
   	margin-bottom: 0;
+  }
+  .form-container {
+  	display: flex;
+  	flex-wrap: wrap;
+
+  }
+  .form-title {
+  	margin-right: 0;
   }
   
 }
