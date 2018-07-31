@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="contact form example">
     <link rel="stylesheet" href="lawn.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
   <title>Contact Form</title>
 </head>
 <body class="form-body">
@@ -17,17 +19,17 @@
         <div class="navList">
           <ul class="nav-list-top">
             <li>
-              <a class="nav-active" href="#header">
+              <a class="nav-active" href="lawn.html">
                 <div class="nav-list-items">HOME</div>
               </a>
             </li>
             <li>
-              <a class="nav-active" href="#about-section">
+              <a class="nav-active" href="lawn.html#about-section">
                 <div class="nav-list-items">ABOUT</div>
               </a>
             </li>
             <li>
-              <a class="nav-active" href="#lawncare">
+              <a class="nav-active" href="lawn.html#lawncare">
                 <div class="nav-list-items">SERVICES</div>
               </a>
             </li>
@@ -51,18 +53,10 @@
                 <div class="nav-list-items">CR LOGO</div>
               </a>
             </li>
-          <!--
-            <li>
-              <a class="nav-active" href="#contact-section">
-                <div class="nav-list-items">515.515.2234</div>
-              </a>
-            </li>
-          -->
             <a class="mobile-nav-icon">
               <i class="fa fa-bars" id="menu-icon" aria-hidden="true"></i> 
             </a>
-        </div>
-          
+        </div>   
       </nav>    <!--     End of Nav Bar Top   -->
 
       <nav class="mobile-nav" id="mobile-nav">
@@ -79,22 +73,22 @@
                 </a>
               </li>
               <li>
-                <a class="nav-active" href="#lawncare-section">
+                <a class="nav-active" href="lawn.html#lawncare-section">
                   <div class="nav-list-mobile" class="close-menu">Lawn Care</div>
                 </a>
               </li>
               <li>
-                <a class="nav-active" href="landscaping-section">
+                <a class="nav-active" href="lawn.html#landscaping-section">
                   <div class="nav-list-mobile" class="close-menu">Landscaping</div>
                 </a>
               </li>
               <li>
-                <a class="nav-active" href="#cleanup-section">
+                <a class="nav-active" href="lawn.html#cleanup-section">
                   <div class="nav-list-mobile" class="close-menu">Spring/Fall Cleanup</div>
                 </a>
               </li>
               <li>
-                <a class="nav-active" href="#snow-section">
+                <a class="nav-active" href="lawn.html#snow-section">
                   <div class="nav-list-mobile" class="close-menu">Snow Removal</div>
                 </a>
               </li>
@@ -104,47 +98,33 @@
                 </a>
               </li>
               <li>
-                <a class="nav-active" href="#about-section">
+                <a class="nav-active" href="lawn.html#about-section">
                   <div class="nav-list-mobile" id="about-mobile" class="close-menu">About</div>
                 </a>
-              </li>
-              
-              
+              </li> 
             </ul>
           </div>
         </nav>
 
-
-
-
   <div class="form-container">
     <div class="form-details">
-      <h2 class="content-head form-title is-center">Contact Us!</h2>
-        
-          
-            
-            
-            <ul class="other-contact">
-              <li class="contact-phone">Phone: 515-221-1321</li>
-              <li class="contact-email">E-mail: myemail@email.com</li>
-            </ul>
-
-            <ul class="contact-address">
-              <li>CR Lawn and Landscaping<br>PO BOX 231<br> West Des Moines<br> Iowa 50265</li>
-            </ul>
-          
-        </div>
+      <h2 class="content-head form-title is-center" id="contact-us">Contact Us</h2>
+        <ul class="other-contact">
+          <li class="contact-phone">Phone: 515-221-1321</li>
+          <li class="contact-email">E-mail: myemail@email.com</li>
+        </ul>
+        <ul class="contact-address">
+          <li>CR Lawn and Landscaping<br>PO BOX 231<br> West Des Moines<br> Iowa 50265</li>
+        </ul>  
+    </div>
     
     <div class="contact-form-email">
-      <h2 class="content-head form-title is-center">Send Us An Email!</h2>
-        
+      <h2 class="content-head form-title is-center">Send Us An Email</h2>
                 <p class="form-text">Please fill out the information below if you are interested in a FREE quote, or simply have a few questions you’d like answered:
                 </p>
-         
-
+    
       <form id="gform" method="POST" class="pure-form pure-form-stacked" data-email="example@email.net"
       action="use your own script for this.">
-
         <fieldset class="pure-group">
           <label for="name">Name: </label>
             <input id="name" name="name" placeholder="" />
@@ -172,25 +152,24 @@
         We will get back to you soon!</h2>
     </div>
   </div>  <!-- End of Div Form Container -->
-<div class="footer">
-        <div class="footer-contact-logo">
-          <div class="logo">CR Logo
-          </div>
-          <div class="footer-address">
-            <li>PO BOX 231<br> West Des Moines<br> Iowa 50265</li>
-          </div>
-          <div class="footer-other-contact">
-            <li class="footer-phone">515-221-1321</li>
-            <li class="footer-email">myemail@email.com</li>
-          </div>
-          </div>
-          <a class="footer-copyright" href="http://www.brianarchibald.me">
-            <div class="copyright">Designed by &copy; BrianArchibald.me</div>
-          </a>
+
+  <div class="footer">
+    <div class="footer-contact-logo">
+      <div class="logo">CR Logo</div>
+      <div class="footer-address">
+        <li>PO BOX 231<br> West Des Moines<br> Iowa 50265</li>
       </div>
-  
+      <div class="footer-other-contact">
+        <li class="footer-phone">515-221-1321</li>
+        <li class="footer-email">myemail@email.com</li>
+      </div>
+    </div>
+        <a class="footer-copyright" href="http://www.brianarchibald.me">
+        <div class="copyright">Designed by &copy; BrianArchibald.me</div>
+        </a>
+  </div>
+</body>
   <script data-cfasync="false" type="text/javascript"
   src="form-submission-handler.js"></script>
-
-</body>
+  <script type="text/javascript" src="lawn.js"></script>
 </html>
