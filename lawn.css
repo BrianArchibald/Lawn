@@ -43,7 +43,15 @@ a {
 	font-size: 25px;
 	font-weight: 200;
 	text-align: center;
-     margin-bottom: 20vh;
+    margin-bottom: 20vh;
+}
+.header-phone {
+	text-align: center;
+	font-family: 'Lora', serif;
+	font-size: 1.5em;
+	margin-top: -15vh;
+	color: #68c440;
+	letter-spacing: 1px;
 }
 
 /* Top Nav Bar  */
@@ -141,6 +149,11 @@ a {
 	display: none;
 	transition: all .5s;
 }
+.nav-logo, .logo {
+	font-family: 'Lora', serif;
+	color: white;
+	margin-left: 4vh;
+}
 .nav-list-bottom {
 	list-style-type: none;
 	margin: 0;
@@ -175,7 +188,8 @@ a {
 /* Mobile Nav Icon */
 
 .mobile-nav-icon {
-	cursor: pointer;	
+	cursor: pointer;
+	margin-top: 1vh;	
 }
 #menu-icon {
 	font-size: 3vh;
@@ -188,6 +202,9 @@ a {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+}
+.contact-button {
+	cursor: pointer;
 }
 
 /* Section Container  */
@@ -259,10 +276,10 @@ button {
     margin-bottom: 30px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
-
 button:hover {
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 	background-color: #59d15d;
+	cursor: pointer;
 }
 
 /* Footer  */
@@ -272,9 +289,11 @@ button:hover {
 }
 .footer-address li {
 	list-style: none;
+	font-family: 'Lora', serif;
 }
 .footer-other-contact li {
 	list-style: none;
+	font-family: 'Lora', serif;
 }
 .footer-contact-logo {
 	display: grid;
@@ -286,12 +305,15 @@ button:hover {
 }
 .copyright {
 	text-align: center;
-	padding-top: 5vh;
-	color: white;
+	padding-top: 2vh;
+	color: #ffe3bc;
+	font-family: 'Lora', serif;
 }
 
 /*  Image Gallery   */
-
+.gallery-body {
+	background-color: #efefef;
+}
 .gallery-header {
 	color: #653000;
 	text-align: center;
@@ -299,7 +321,6 @@ button:hover {
 	font-family: Open Sans;
 }
 .gallery-container {
-	
 	margin: 10vh 5vh;
 }
 .gallery-buttons {
@@ -312,6 +333,9 @@ button:hover {
   flex-wrap: wrap;
   justify-content: center;
   overflow: hidden;
+}
+.gallery-photo {
+	width: 100%;
 }
 
 /* Create four equal columns that sits next to each other */
@@ -391,6 +415,8 @@ aside {
 }
 .contact-phone {
 	font-size: 1.25em;
+	margin-bottom: 1vh;
+	font-weight: bold;
 }
 
 /* Media Responsive Layout */
@@ -430,18 +456,13 @@ aside {
   .mobile-nav-container {
 	display: inline-block;
 	}
-
 }
-
-
-
 
 @media screen and (max-width: 891px) {
   .gallery-column {
     flex: 50%;  
     max-width: 50%;
   }
-
   .section-container img {
   	width: 50vh;
     height: auto;
@@ -454,7 +475,6 @@ aside {
   .form-container {
   	display: flex;
   	flex-wrap: wrap;
-
   }
   .form-title {
   	margin-right: 0;
@@ -465,16 +485,13 @@ aside {
 	.header-text {
     margin-top: -80vh;
 	}
-
 }
-
 
 @media screen and (max-width: 600px) {
   .gallery-column {
     flex: 100%;
     max-width: 100%;
   }
-
   .section-img {
     padding-top: 0;
    }
@@ -488,7 +505,6 @@ aside {
 	#contact-us {
 	margin-left: 5vw;
 	}
-
 }
 
 @media screen and (max-width: 500px) {
@@ -499,7 +515,6 @@ aside {
 }
 
 @media screen and (max-width: 441px) {
-
   .section-container img {
   	width: 22vh;
     height: auto;
@@ -515,6 +530,10 @@ aside {
   #message {
   	width: 35vh;
   }
+  .footer-address {
+  	display: none;
+  }
+}
 
   @media screen and (max-width: 357px) {
   	#contact-us {

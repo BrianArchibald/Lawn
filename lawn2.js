@@ -16,20 +16,3 @@ function changeMobileNav() {
 }
 mobileNavIcon.addEventListener('click', changeMobileNav);
 closeMenu.addEventListener('click', changeMobileNav);
-
-
-function stickyElement(e) {
-  
-  var header = document.querySelector('.header');
-  var headerHeight = getComputedStyle(header).height.split('px')[0];
-  var navbar = document.querySelector('.navbar-top');  
-  var scrollValue = window.scrollY + 45;
-  
-  if (scrollValue > headerHeight) {
-    navbar.classList.add('nav-sticky-v2');
-    
-  } else if (scrollValue < headerHeight) {
-    navbar.classList.remove('nav-sticky-v2'); 
-  }
-}
-window.addEventListener('scroll', stickyElement);
