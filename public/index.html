@@ -1,65 +1,259 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lawn Service</title>
+	<link rel="stylesheet" type="text/css" href="lawn.css">
+	<link href="https://fonts.googleapis.com/css?family=Lora|Open+Sans:300,400" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+	<script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyAMvGsWB7VP4_h32WB6USJgxxNFpO6At3k",
+	    authDomain: "lawn-894dc.firebaseapp.com",
+	    databaseURL: "https://lawn-894dc.firebaseio.com",
+	    projectId: "lawn-894dc",
+	    storageBucket: "lawn-894dc.appspot.com",
+	    messagingSenderId: "594100367032"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+</head>
+<body>
+	<div id="app">
+		<header class="header" id="header">
+			<nav class="navbar navbar-top" id="navbarTop">
+				<div class="navLogo">
+					<a>
+						<h1 id="nav-logo" class="logo">CRLL</h1>
+					</a>
+				</div>
+				<div class="navList">
+					<ul class="nav-list-top">
+						<li>
+							<a class="nav-active" href="#header">
+								<div class="nav-list-items">HOME</div>
+							</a>
+						</li>
+						<li>
+							<a class="nav-active" href="#about-section">
+								<div class="nav-list-items">ABOUT</div>
+							</a>
+						</li>
+						<li>
+							<a class="nav-active" href="#lawncare-section">
+								<div class="nav-list-items">SERVICES</div>
+							</a>
+						</li>
+						<li>
+							<a class="nav-active" href="gallery.html">
+								<div class="nav-list-items">PHOTOS</div>
+							</a>
+						</li>
+						<li>
+							<a class="nav-active" href="contact-form.html">
+								<div class="nav-list-items">CONTACT</div>
+							</a>
+						</li>
+					</ul>
+				</div>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/5.3.1/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/5.3.1/firebase-auth.js"></script>
-    <script defer src="/__/firebase/5.3.1/firebase-database.js"></script>
-    <script defer src="/__/firebase/5.3.1/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/5.3.1/firebase-storage.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
+				<div class="mobile-nav-container">
+					<ul class="mobile-nav-list-bottom">
+						<li class="navLogoBottom">
+							<a class="nav-active " href="#lawncare">
+								<div class="nav-list-items">CR LOGO</div>
+							</a>
+						</li>
+						<a class="mobile-nav-icon">
+							<i class="fa fa-bars" id="menu-icon" aria-hidden="true"></i> 
+						</a>
+				</div>		
+			</nav>     <!-- End of Nav Bar Top -->
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+			<nav class="mobile-nav" id="mobile-nav">
+				<div class="mobile-menu" id="close-menu">
+					<ul class="mobile-list" id="mobile-list">
+						<li>
+							<a class="nav-active">
+								<div class="nav-list-mobile" class="close-menu">Close Menu</div>
+							</a>
+						</li>
+						<li>
+							<a class="nav-active" href="contact-form.html">
+								<div class="nav-list-mobile" id="mobile-contact" class="close-menu">Contact</div>
+							</a>
+						</li>
+						<li>
+							<a class="nav-active" href="#lawncare-section">
+								<div class="nav-list-mobile" class="close-menu">Lawn Care</div>
+							</a>
+						</li>
+						<li>
+							<a class="nav-active" href="#landscaping-section">
+								<div class="nav-list-mobile" class="close-menu">Landscaping</div>
+							</a>
+						</li>
+						<li>
+							<a class="nav-active" href="#cleanup-section">
+								<div class="nav-list-mobile" class="close-menu">Spring/Fall Cleanup</div>
+							</a>
+						</li>
+						<li>
+							<a class="nav-active" href="#snow-section">
+								<div class="nav-list-mobile" class="close-menu">Snow Removal</div>
+							</a>
+						</li>
+						<li>
+							<a class="nav-active" href="gallery.html">
+								<div class="nav-list-mobile" class="close-menu">Photos</div>
+							</a>
+						</li>
+						<li>
+							<a class="nav-active" href="#about-section">
+								<div class="nav-list-mobile" id="about-mobile" class="close-menu">About</div>
+							</a>
+						</li>	
+					</ul>
+				</div>
+			</nav>    <!--  End of Mobile Nav -->
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+			<div class="header-text">
+				<h1 class="header-main-text">CR Lawn and Landscaping</h1>
+				<p class="header-additional-text">Providing all of your lawn care and landscaping needs.</p>
+				<p class="header-phone">515-221-1321</p>
+			</div>     <!-- End of Header Text -->
+		</header>      <!--End of header-->
 
-        try {
-          let app = firebase.app();
-          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+		<section class="lawncare" id="lawncare-section">
+			<div class="section-container" id="lawncare-section">
+				<div class="section-img">
+					<img id="lawncare-photo" src="mower.jpg">
+				</div>
+				<div class="section-text">
+					<h1 class="section-header">
+					Lawn Care
+					</h1>
+					<p class="section-main-text">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+					</p>
+				</div>
+				<div class="button-container">
+					<a class="contact-button" href="contact-form.html">
+					<button class="contact">Contact Us</button>
+					</a>
+				</div>
+			</div>
+		</section>    <!-- End of Lawn Care Section -->
+
+		<section class="landscaping" id="landscaping-section">
+			<div class="section-container">
+				<div class="section-img">
+					<img id="landscaping-photo" src="landscape.jpg">
+				</div>
+				<div class="section-text">
+					<h1 class="section-header">
+						Landscaping
+					</h1>
+					<p class="section-main-text">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+					</p>
+				</div>
+				<div class="button-container">
+					<a class="contact-button" href="contact-form.html">
+					<button class="contact">Contact Us</button>
+					</a>
+				</div>
+			</div>
+		</section>  <!-- End of Landscaping Section -->
+
+		<section class="cleanup" id="cleanup-section">
+			<div class="section-container" id="cleanup-container">
+				<div class="section-img">
+					<img id="cleanup-photo" src="leaves.jpg">
+				</div>
+				<div class="section-text">
+					<h1 class="section-header">
+						Spring/Fall Cleanup
+					</h1>
+					<p class="section-main-text">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+					</p>
+				</div>
+				<div class="button-container">
+					<a class="contact-button" href="contact-form.html">
+					<button class="contact">Contact Us</button>
+					</a>
+				</div>
+			</div>
+		</section>  <!-- End of Clean Up Section -->
+
+		<section class="snowremoval" id="snow-section">
+			<div class="section-container">
+				<div class="section-img">
+					<img id="snow-photo" src="snow.jpg">
+				</div>
+				<div class="section-text">
+					<h1 class="section-header">
+						Snow Removal
+					</h1>
+					<p class="section-main-text">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+					</p>
+				</div>
+				<div class="button-container">
+					<a class="contact-button" href="contact-form.html">
+					<button class="contact">Contact Us</button>
+					</a>
+				</div>
+			</div>
+		</section>  <!-- End of Snow Removal Section -->
+
+		<section class="about" id="about-section">
+			<div class="section-container" id="about-container">
+				<div class="section-img">
+					<img id="about-photo" src="owner.jpg">
+				</div>
+				<div class="section-text">
+					<h1 class="section-header">
+						About Us
+					</h1>
+					<p class="section-main-text">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+					</p>
+				</div>
+				<div class="button-container">
+					<a class="contact-button" href="contact-form.html">
+					<button class="contact">Contact Us</button>
+					</a>
+				</div>
+			</div>
+		</section>  <!-- End of Contact Section -->
+
+		<footer>
+			<div class="footer">
+				<div class="footer-contact-logo">
+					<div class="logo">CRLL
+					</div>
+					<div class="footer-address">
+						<li>PO BOX 231<br> West Des Moines<br> Iowa 50265</li>
+					</div>
+					<div class="footer-other-contact">
+						<li class="footer-phone">515-221-1321</li>
+						<li class="footer-email">myemail@email.com</li>
+				        <li>
+				          <i class="fab fa-facebook-f"></i>
+				        </li>    
+					</div>
+				</div>
+					<a class="footer-copyright" href="http://www.brianarchibald.me">
+						<div class="copyright">Designed by &copy; BrianArchibald.me</div>
+					</a>
+			</div>
+		</footer>
+	</div> <!-- End of Div Id App -->
+	<script type="text/javascript" src="lawn.js"></script>
+</body>
 </html>
