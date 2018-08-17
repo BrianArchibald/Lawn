@@ -317,7 +317,7 @@ button:hover {
 .gallery-header {
 	color: #653000;
 	text-align: center;
-	font-size: 50px;
+	font-size: 40px;
 	font-family: Open Sans;
 }
 .gallery-container {
@@ -376,7 +376,7 @@ button:hover {
 	color: #653000;
 }
 .form-details {
-	margin-right: 3vw;
+	margin-right: 7vw;
 }
 .form-title {
 	font-size: 28px;
@@ -483,7 +483,7 @@ aside {
 	margin-left: 4vw;
 	}
 	.header-text {
-    margin-top: -80vh;
+    margin-top: -85vh;
 	}
 }
 
@@ -499,24 +499,24 @@ aside {
    	padding-top: 8vh;
    }
    .section-container img {
-    width: 38vh;
+    width: 55vh;
     height: auto;
 	}
 	#contact-us {
-	margin-left: 5vw;
+	margin-left: 6vw;
 	}
 }
 
 @media screen and (max-width: 500px) {
 	.section-container img {
-    width: 30vh;
+    width: 55vh;
     height: auto;
 	}
 }
 
 @media screen and (max-width: 441px) {
   .section-container img {
-  	width: 22vh;
+  	width: 45vh;
     height: auto;
   }
   .header-main-text {
@@ -537,7 +537,7 @@ aside {
 
   @media screen and (max-width: 357px) {
   	#contact-us {
-	margin-left: 7vw;
+	margin-left: 9vw;
 	}
 	.header-main-text {
     font-size: 2.5em;
