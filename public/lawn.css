@@ -220,11 +220,16 @@ a {
 	transform: scale(0.98);
 	transition: transform 0.5s;
 }
+.cleanup {
+	margin-top: -5vh;
+}
+
 #cleanup-container, #about-container {
 	margin-top: 0;
 }
 .section-text {
 	display: grid;
+	margin-top: -9vh;
 }
 .bottom-nav-fixed .section-container {
 	transform: scale(1);
@@ -250,14 +255,25 @@ a {
 
 #landscaping-section {
 	background-color: #efefef;
-	margin-top: -9vh;
+	margin-top: -21vh;
+}
+.landscaping-container {
+	padding-top: 14vh;
 }
 
 /* Snow Removal */
 
 .snowremoval {
 	background-color: #efefef;
-	margin-top: -9vh;
+	margin-top: -21vh;
+}
+.snow-container {
+	padding-top: 14vh;
+}
+
+/* About Container */
+#about-container {
+	margin-bottom: 2vh;
 }
 
 /* Buttons */
@@ -442,10 +458,29 @@ aside {
 		text-align: center;
 		padding-bottom: 5vh;
 	}
+	.section-text {
+	margin-top: 0vh;
+	}
+	
 	button {
 		justify-self: center;
 	}
-
+	.cleanup {
+		margin-top: 0vh;
+	}
+	#about-container {
+	margin-bottom: 0;
+	}
+	.snow-container, .landscaping-container {
+	padding-top: 0;
+	}
+	#landscaping-section {
+	margin-top: -9vh;
+	}
+	.snowremoval {
+	margin-top: -9vh;
+	}
+	
 @media screen and (max-width: 1078px) {  /*iPad in landscape mode has 1024px */	
 	.section-img {
 	justify-self: center;
@@ -453,7 +488,7 @@ aside {
 	.navList {
   	display: none;
   	}
-  .mobile-nav-container {
+    .mobile-nav-container {
 	display: inline-block;
 	}
 }
@@ -481,10 +516,10 @@ aside {
   }
   #contact-us {
 	margin-left: 4vw;
-	}
-	.header-text {
-    margin-top: -85vh;
-	}
+  }
+  .header-text {
+   margin-top: -85vh;
+   }
 }
 
 @media screen and (max-width: 600px) {
@@ -535,11 +570,11 @@ aside {
   }
 }
 
-  @media screen and (max-width: 357px) {
-  	#contact-us {
+@media screen and (max-width: 357px) {
+	#contact-us {
 	margin-left: 9vw;
 	}
 	.header-main-text {
-    font-size: 2.5em;
+	font-size: 2.5em;
 	}
-  }
+}
