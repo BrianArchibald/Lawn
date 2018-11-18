@@ -1,6 +1,6 @@
 # Lawn and Landscaping Website
 
-This is a fictional site for a lawn and landscaping business created from scratch.  The site features a photo gallery and a contact form page for clients.  The site is fully responsive and features prominent call to actions throughout the sections.
+This is a site for a lawn and landscaping business created from scratch.  The site features a photo gallery and a contact form page for clients.  The site is fully responsive and features prominent call to actions throughout the sections.
 
 ## Deployment
 
